@@ -66,6 +66,18 @@ body {
   margin-bottom: 15px;
 }
 
+.terms-text a {
+  color: #00d4ff;
+  text-decoration: underline;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.terms-text a:hover {
+  color: #ffffff;
+  text-shadow: 0 0 15px rgba(0, 212, 255, 0.8);
+}
+
 .terms-text ul {
   margin-left: 20px;
   margin-bottom: 15px;
@@ -330,6 +342,18 @@ body {
   text-shadow: 0 0 15px rgba(0, 212, 255, 0.8);
 }
 
+.tos-link {
+  color: #00d4ff;
+  text-decoration: underline;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.tos-link:hover {
+  color: #ffffff;
+  text-shadow: 0 0 15px rgba(0, 212, 255, 0.8);
+}
+
 .popup-window::-webkit-scrollbar {
   width: 8px;
 }
@@ -564,10 +588,12 @@ body {
   justify-content: space-between;
   gap: 30px;
   padding: 24px 28px;
-  background: rgba(0, 212, 255, 0.08);
+  background: rgba(0, 212, 255, 0.15);
   border: 2px solid rgba(0, 212, 255, 0.45);
   border-radius: 18px;
-  box-shadow: 0 0 22px rgba(0, 212, 255, 0.35);
+  box-shadow: 0 0 30px rgba(0, 212, 255, 0.6), 0 0 60px rgba(0, 153, 255, 0.4), inset 0 0 20px rgba(0, 212, 255, 0.1);
+  backdrop-filter: blur(10px);
+  transition: box-shadow 0.3s ease;
 }
 
 .community-text {
