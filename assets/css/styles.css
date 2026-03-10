@@ -214,12 +214,111 @@ body {
 
 /* RESPONSIVE */
 
-@media (max-width: 900px) {
+/* Tablets */
+@media (max-width: 1024px) {
+  .left-panel {
+    width: 40%;
+    padding: 30px;
+  }
+
+  .right-panel {
+    width: 60%;
+  }
+
+  .left-panel h2 {
+    font-size: 36px;
+  }
+
+  .promo p {
+    font-size: 17px;
+  }
+
+  .catalog-btn h4 {
+    font-size: 20px;
+  }
+
+  .main-title {
+    font-size: 60px;
+  }
+}
+
+/* Móviles */
+@media (max-width: 768px) {
   .panel {
     flex-direction: column;
   }
 
   .left-panel, .right-panel {
     width: 100%;
+  }
+
+  .left-panel {
+    padding: 30px 20px;
+    min-height: auto;
+  }
+
+  .right-panel {
+    min-height: 50vh;
+  }
+
+  .left-panel h1 {
+    font-size: 14px;
+  }
+
+  .left-panel h2 {
+    font-size: 32px;
+  }
+
+  .left-panel h3 {
+    font-size: 14px;
+  }
+
+  .title-with-logo img {
+    width: 40px;
+    height: 40px;
+  }
+
+  .promo p {
+    font-size: 16px;
+    line-height: 1.6;
+  }
+
+  .catalog-btn {
+    padding: 15px 30px;
+  }
+
+  .catalog-btn h4 {
+    font-size: 18px;
+    letter-spacing: 2px;
+  }
+
+  .main-title {
+    font-size: 48px;
+  }
+}
+
+@media (max-width: 480px) {
+  .left-panel {
+    padding: 25px 15px;
+  }
+
+  .left-panel h2 {
+    font-size: 28px;
+  }
+
+  .promo p {
+    font-size: 15px;
+  }
+
+  .catalog-btn {
+    padding: 12px 25px;
+  }
+
+  .catalog-btn h4 {
+    font-size: 16px;
+  }
+
+  .main-title {
+    font-size: 36px;
   }
 }
