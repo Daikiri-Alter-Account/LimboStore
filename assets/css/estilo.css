@@ -1291,6 +1291,45 @@ body {
   transform: scale(1.05);
 }
 
+.purchase-buttons {
+  display: flex;
+  gap: 15px;
+  margin-top: auto;
+  width: 100%;
+}
+
+.whatsapp-buy-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+  background: rgba(0, 212, 255, 0.2);
+  border: 2px solid #00d4ff;
+  border-radius: 12px;
+  padding: 16px 24px;
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 20px;
+  font-weight: 700;
+  box-shadow: 0 0 25px rgba(0, 212, 255, 0.6);
+  transition: 0.3s;
+  text-shadow: 0 0 10px rgba(255, 255, 255, 0.8);
+  flex: 1;
+  max-width: 100%;
+  box-sizing: border-box;
+  text-align: center;
+  flex-wrap: wrap;
+  white-space: normal;
+  word-break: break-word;
+  font-size: clamp(16px, 2vw, 20px);
+}
+
+.whatsapp-buy-btn:hover {
+  background: rgba(0, 212, 255, 0.3);
+  box-shadow: 0 0 35px rgba(0, 212, 255, 0.8);
+  transform: scale(1.05);
+}
+
 @media (max-width: 900px) {
   .product-modal-content {
     flex-direction: column;
@@ -1301,8 +1340,15 @@ body {
     padding: 10px;
   }
 
-  .discord-buy-btn {
+  .purchase-buttons {
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .discord-buy-btn,
+  .whatsapp-buy-btn {
     font-size: 17px;
     gap: 10px;
+    padding: 14px 20px;
   }
 }
