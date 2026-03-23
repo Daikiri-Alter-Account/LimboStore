@@ -324,7 +324,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
   // Manejo del modal de producto
   const productModal = document.getElementById('productModal');
-  const buyButtons = document.querySelectorAll('.buy-btn');
+  const buyButtons = document.querySelectorAll('.product-buy-btn');
   
   function formatProductDescription(rawDescription) {
     const normalized = (rawDescription || '').replace(/&#10;/g, '\n');
