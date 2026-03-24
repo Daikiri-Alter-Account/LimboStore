@@ -170,7 +170,6 @@ body {
   gap: 20px;
   flex: 1;
   justify-content: center;
-  flex-wrap: wrap;
 }
 
 .menu-btn {
@@ -847,22 +846,10 @@ body {
   .top-bar {
     padding: 20px 30px;
     margin: 20px;
-    border-radius: 32px;
-    flex-wrap: wrap;
   }
 
   .logo {
     font-size: 30px;
-  }
-
-  .menu {
-    order: 3;
-    width: 100%;
-    gap: 12px;
-  }
-
-  .social-links {
-    margin-left: auto;
   }
 
   .menu-btn {
