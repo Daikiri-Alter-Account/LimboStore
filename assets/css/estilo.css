@@ -932,13 +932,10 @@ body {
     gap: 20px;
     margin: 16px;
     padding: 20px;
-    border-radius: 26px;
   }
 
   .menu {
     justify-content: center;
-    width: 100%;
-    gap: 10px;
   }
 
   .logo {
@@ -948,7 +945,6 @@ body {
   .menu-btn {
     font-size: 14px;
     padding: 8px 12px;
-    min-width: calc(50% - 10px);
   }
 
   .social-links {
@@ -1084,7 +1080,6 @@ body {
   .top-bar {
     padding: 15px;
     margin: 12px;
-    border-radius: 22px;
   }
 
   .logo {
@@ -1094,7 +1089,6 @@ body {
   .menu-btn {
     font-size: 13px;
     padding: 6px 10px;
-    min-width: 100%;
   }
 
   .social-icon {
