@@ -12,6 +12,7 @@ body {
               #021417;
   color: #ffffff;
   min-height: 100vh;
+  overflow-x: hidden;
 }
 
 /* Modal de Términos y Condiciones */
@@ -169,6 +170,7 @@ body {
   gap: 20px;
   flex: 1;
   justify-content: center;
+  flex-wrap: wrap;
 }
 
 .menu-btn {
@@ -684,6 +686,7 @@ body {
   align-items: center;
   justify-content: center;
   gap: 20px;
+  flex-wrap: wrap;
   border: 2px solid #00d4ff;
   border-radius: 50px;
   margin-bottom: 52px;
@@ -704,6 +707,7 @@ body {
   cursor: pointer;
   border-radius: 25px;
   transition: 0.3s;
+  white-space: nowrap;
 }
 
 .category-btn:hover {
@@ -724,11 +728,13 @@ body {
   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
   gap: 36px;
   margin-top: 26px;
+  align-items: stretch;
 }
 
 .product-card {
   display: flex;
   flex-direction: column;
+  min-width: 0;
   background: rgba(26, 26, 26, 0.8);
   border: 2px solid #00d4ff;
   border-radius: 15px;
@@ -841,10 +847,22 @@ body {
   .top-bar {
     padding: 20px 30px;
     margin: 20px;
+    border-radius: 32px;
+    flex-wrap: wrap;
   }
 
   .logo {
     font-size: 30px;
+  }
+
+  .menu {
+    order: 3;
+    width: 100%;
+    gap: 12px;
+  }
+
+  .social-links {
+    margin-left: auto;
   }
 
   .menu-btn {
@@ -888,6 +906,7 @@ body {
   .categories-bar {
     padding: 18px 30px;
     gap: 15px;
+    border-radius: 30px;
   }
 
   .category-btn {
@@ -913,11 +932,13 @@ body {
     gap: 20px;
     margin: 16px;
     padding: 20px;
+    border-radius: 26px;
   }
 
   .menu {
-    flex-wrap: wrap;
     justify-content: center;
+    width: 100%;
+    gap: 10px;
   }
 
   .logo {
@@ -927,6 +948,7 @@ body {
   .menu-btn {
     font-size: 14px;
     padding: 8px 12px;
+    min-width: calc(50% - 10px);
   }
 
   .social-links {
@@ -1003,15 +1025,22 @@ body {
   }
 
   .categories-bar {
-    flex-wrap: wrap;
+    justify-content: flex-start;
     padding: 15px 20px;
     margin-bottom: 36px;
     gap: 10px;
+    overflow-x: auto;
+    overflow-y: hidden;
+    flex-wrap: nowrap;
+    scroll-snap-type: x proximity;
+    scrollbar-width: thin;
   }
 
   .category-btn {
     font-size: 14px;
     padding: 10px 20px;
+    flex: 0 0 auto;
+    scroll-snap-align: start;
   }
 
   .products-grid {
@@ -1022,6 +1051,7 @@ body {
   .popup-window {
     width: 90%;
     padding: 45px 25px 25px 25px;
+    max-height: min(80vh, 560px);
   }
 
   .popup-window h3 {
@@ -1054,6 +1084,7 @@ body {
   .top-bar {
     padding: 15px;
     margin: 12px;
+    border-radius: 22px;
   }
 
   .logo {
@@ -1063,6 +1094,7 @@ body {
   .menu-btn {
     font-size: 13px;
     padding: 6px 10px;
+    min-width: 100%;
   }
 
   .social-icon {
@@ -1121,6 +1153,7 @@ body {
 
   .categories-bar {
     padding: 12px 15px;
+    border-radius: 22px;
   }
 
   .category-btn {
@@ -1138,6 +1171,7 @@ body {
 
   .popup-window {
     padding: 40px 20px 20px 20px;
+    width: calc(100vw - 24px);
   }
 
   .popup-window h3 {
@@ -1193,6 +1227,7 @@ body {
   height: 100%;
   padding: 50px 20px 20px 20px;
   gap: 30px;
+  overflow: hidden;
 }
 
 .product-modal-left {
@@ -1207,7 +1242,7 @@ body {
 
 .product-modal-left img {
   max-width: 100%;
-  max-height: 400px;
+  max-height: min(400px, 55vh);
   object-fit: contain;
   border-radius: 10px;
 }
@@ -1251,6 +1286,7 @@ body {
   overflow-y: auto;
   padding-right: 8px;
   white-space: pre-line;
+  overflow-wrap: anywhere;
 }
 
 #modalProductDescription::-webkit-scrollbar {
@@ -1333,13 +1369,34 @@ body {
 }
 
 @media (max-width: 900px) {
+  .product-modal {
+    width: min(92vw, 760px);
+    max-height: 92vh;
+  }
+
   .product-modal-content {
     flex-direction: column;
     overflow-y: auto;
+    max-height: 92vh;
+    padding: 46px 16px 18px;
+    gap: 18px;
   }
 
   .product-modal-right {
     padding: 10px;
+  }
+
+  .product-modal-left {
+    min-height: 220px;
+    padding: 16px;
+  }
+
+  .product-modal-left img {
+    max-height: 260px;
+  }
+
+  #modalProductDescription {
+    max-height: 220px;
   }
 
   .discord-buy-btn,
@@ -1351,6 +1408,11 @@ body {
 }
 
 @media (max-width: 600px) {
+  .product-modal {
+    width: calc(100vw - 20px);
+    max-width: none;
+  }
+
   .purchase-buttons {
     grid-template-columns: 1fr;
   }
@@ -1365,5 +1427,19 @@ body {
   .whatsapp-buy-btn svg {
     width: 20px;
     height: 20px;
+  }
+
+  .product-modal-right h2 {
+    font-size: 24px;
+  }
+
+  .product-modal-right p {
+    font-size: 15px;
+    line-height: 1.6;
+  }
+
+  #modalProductDescription {
+    min-height: 90px;
+    max-height: 180px;
   }
 }
